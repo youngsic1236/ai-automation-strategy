@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI 블로그 부업 — 핵심 요약</title>
+  <meta name="description" content="AI 블로그 부업이 막히는 이유와 경험·검증 중심의 실행 전략을 한눈에 정리한 요약 페이지" />
+  <style>
+    :root{--ink:#17211b;--muted:#68736c;--paper:#f4f1e9;--card:#fffdf7;--line:#d9d6ca;--green:#204f3b;--lime:#cde86d;--orange:#f17945;--shadow:0 18px 50px rgba(27,46,35,.10)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;color:var(--ink);background:var(--paper);font-family:Pretendard,"Noto Sans KR",system-ui,-apple-system,sans-serif;line-height:1.65;word-break:keep-all}
+    a{color:inherit}.wrap{width:min(1160px,calc(100% - 36px));margin:auto}.topbar{position:sticky;top:0;z-index:20;background:rgba(244,241,233,.9);backdrop-filter:blur(14px);border-bottom:1px solid rgba(32,79,59,.12)}
+    .topbar .wrap{height:66px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:900;letter-spacing:-.04em}.brand b{color:var(--green)}
+    nav{display:flex;gap:18px;font-size:14px;color:var(--muted)}nav a{text-decoration:none}nav a:hover{color:var(--ink)}
+    .hero{padding:82px 0 60px}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:99px;background:var(--lime);font-weight:800;font-size:13px;letter-spacing:.02em}
+    h1{font-size:clamp(42px,7vw,86px);line-height:1.02;letter-spacing:-.07em;margin:24px 0 24px;max-width:980px}.hero h1 em{font-style:normal;color:var(--green);position:relative}.lede{font-size:clamp(18px,2.2vw,25px);max-width:760px;color:#455149;margin:0}
+    .thesis{margin-top:44px;background:var(--green);color:#fff;border-radius:28px;padding:30px 34px;display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start;box-shadow:var(--shadow)}.thesis .num{font-size:14px;font-weight:900;color:var(--lime);padding-top:5px}.thesis strong{display:block;font-size:clamp(23px,3vw,38px);line-height:1.25;letter-spacing:-.045em}.thesis p{color:#d7e4db;margin:13px 0 0}
+    section{padding:76px 0;border-top:1px solid var(--line)}.section-head{display:grid;grid-template-columns:180px 1fr;gap:30px;margin-bottom:34px}.section-no{font-weight:900;color:var(--orange);font-size:14px}.section-head h2{font-size:clamp(30px,4vw,52px);line-height:1.13;letter-spacing:-.055em;margin:0}.section-head p{color:var(--muted);max-width:720px;margin:14px 0 0}
+    .funnel{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}.step{min-height:166px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;display:flex;flex-direction:column;justify-content:space-between}.step.easy{background:#e9f3bd;border-color:#cadb85}.step .tag{font-size:12px;font-weight:900;color:var(--muted)}.step b{font-size:20px;letter-spacing:-.04em}.step small{color:var(--muted)}
+    .callout{margin-top:20px;border-left:5px solid var(--orange);background:rgba(255,253,247,.75);padding:20px 24px;border-radius:0 14px 14px 0;font-size:18px}.callout b{color:var(--green)}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:25px}.card .icon{font-size:28px}.card h3{font-size:21px;letter-spacing:-.035em;margin:13px 0 8px}.card p{margin:0;color:var(--muted)}
+    .compare{overflow:hidden;border:1px solid var(--line);border-radius:22px;background:var(--card)}.row{display:grid;grid-template-columns:1.1fr 1fr 1.2fr}.row>div{padding:18px 22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.row>div:last-child{border-right:0}.row:last-child>div{border-bottom:0}.row.head{font-size:13px;font-weight:900;background:#e9e5d8;color:var(--muted)}.bad{color:#a54d2a}.good{color:var(--green);font-weight:750}
+    .roles{display:grid;grid-template-columns:1fr auto 1fr;gap:20px;align-items:stretch}.role{border-radius:26px;padding:30px}.role.ai{background:#e5e1d5}.role.human{background:var(--green);color:#fff}.role h3{font-size:28px;letter-spacing:-.045em;margin:0 0 18px}.role ul{list-style:none;padding:0;margin:0;display:grid;gap:11px}.role li:before{content:"✓";font-weight:900;margin-right:10px;color:var(--orange)}.human li:before{color:var(--lime)}.arrow{display:grid;place-items:center;font-size:34px;color:var(--orange)}
+    .check-layout{display:grid;grid-template-columns:1fr 340px;gap:22px}.checks{display:grid;gap:10px}.check{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);padding:16px 18px;border-radius:15px;cursor:pointer}.check input{margin-top:5px;accent-color:var(--green);width:18px;height:18px}.check b{display:block}.check span{display:block;color:var(--muted);font-size:14px}.score{position:sticky;top:88px;align-self:start;background:#1f4f3b;color:#fff;border-radius:24px;padding:26px}.score small{color:#cde0d4}.score .big{font-size:64px;line-height:1;font-weight:950;letter-spacing:-.07em;margin:14px 0}.meter{height:10px;background:#436d5c;border-radius:99px;overflow:hidden}.meter i{display:block;height:100%;width:0;background:var(--lime);transition:.25s}.verdict{margin:16px 0 0;font-weight:800}
+    .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;counter-reset:item}.phase{counter-increment:item;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}.phase:before{content:"0" counter(item);display:block;color:var(--orange);font-weight:900;font-size:13px;margin-bottom:38px}.phase h3{margin:0 0 8px;font-size:21px}.phase p{color:var(--muted);margin:0}
+    footer{padding:50px 0 70px;border-top:1px solid var(--line)}.foot{display:flex;justify-content:space-between;gap:24px;align-items:flex-end}.source{max-width:720px;color:var(--muted);font-size:14px}.source a{color:var(--green);font-weight:800}.stamp{font-size:12px;font-weight:900;color:var(--muted);text-align:right}
+    @media(max-width:900px){nav{display:none}.funnel{grid-template-columns:repeat(2,1fr)}.grid3{grid-template-columns:1fr}.section-head{grid-template-columns:1fr;gap:8px}.row{grid-template-columns:1fr}.row.head{display:none}.row>div{border-right:0}.row>div:before{display:block;font-size:11px;font-weight:900;color:var(--muted);margin-bottom:5px}.row>div:nth-child(1):before{content:"현재 방식"}.row>div:nth-child(2):before{content:"문제"}.row>div:nth-child(3):before{content:"전환 기준"}.roles{grid-template-columns:1fr}.arrow{transform:rotate(90deg)}.check-layout{grid-template-columns:1fr}.score{position:static}.timeline{grid-template-columns:1fr 1fr}}
+    @media(max-width:560px){.wrap{width:min(100% - 24px,1160px)}.hero{padding-top:52px}.thesis{grid-template-columns:1fr;padding:24px}.funnel,.timeline{grid-template-columns:1fr}.step{min-height:132px}.foot{display:block}.stamp{text-align:left;margin-top:20px}}
+  </style>
+</head>
+<body>
+  <header class="topbar"><div class="wrap"><div class="brand">AI BLOG <b>/ 요약노트</b></div><nav><a href="#bottleneck">수익 병목</a><a href="#failure">실패 패턴</a><a href="#roles">역할 분담</a><a href="#check">발행 점검</a><a href="#action">실행 순서</a></nav></div></header>
+  <main>
+    <div class="hero wrap">
+      <span class="eyebrow">원문 핵심 재구성 · 5분 읽기</span>
+      <h1>글 100개보다 먼저 필요한 것은 <em>경험과 검증</em>이다.</h1>
+      <p class="lede">AI 블로그 부업이 막히는 이유는 글을 못 써서가 아니다. 누구나 비슷한 글을 너무 빠르게 만들 수 있게 되면서, 차별화되지 않은 글은 정보가 아니라 배경 소음이 되었기 때문이다.</p>
+      <div class="thesis"><div class="num">CORE THESIS</div><div><strong>AI는 ‘작가’보다 ‘편집자’로 쓸 때 강하다.</strong><p>사람이 경험·숫자·비교·실패·책임을 만들고, AI가 그것을 구조화하고 다듬는 방식이 오래가는 블로그를 만든다.</p></div></div>
+    </div>
+
+    <section id="bottleneck"><div class="wrap"><div class="section-head"><div class="section-no">01 · 수익 병목</div><div><h2>글쓰기 자동화와<br>수익 자동화는 다르다</h2><p>AI가 쉽게 줄여 주는 것은 앞단의 제작 시간이다. 실제 수익을 좌우하는 검색·클릭·체류·광고 효율·신뢰는 자동으로 따라오지 않는다.</p></div></div>
+      <div class="funnel"><div class="step easy"><span class="tag">AI 효율 높음</span><b>초안 작성</b><small>빠르게 만들기</small></div><div class="step easy"><span class="tag">AI 효율 높음</span><b>발행 개수</b><small>계속 올리기</small></div><div class="step"><span class="tag">AI 효율 낮음</span><b>검색 노출</b><small>기존 글보다 나은가</small></div><div class="step"><span class="tag">AI 효율 낮음</span><b>클릭</b><small>궁금증을 건드리는가</small></div><div class="step"><span class="tag">AI 효율 낮음</span><b>체류</b><small>새 판단을 주는가</small></div><div class="step"><span class="tag">AI 효율 낮음</span><b>수익</b><small>의도와 RPM이 맞는가</small></div><div class="step"><span class="tag">AI 효율 낮음</span><b>신뢰</b><small>다시 찾을 이유가 있는가</small></div></div>
+      <div class="callout"><b>글 100개</b>와 <b>방문자 2만</b>은 완전히 다른 목표다. 글 개수가 아니라 노출·CTR·체류·RPM으로 계산해야 한다.</div>
+    </div></section>
+
+    <section id="failure"><div class="wrap"><div class="section-head"><div class="section-no">02 · 실패 패턴</div><div><h2>글이 자산이 아니라<br>‘재고’가 되는 순간</h2><p>비슷한 목차, 얕은 검수, 넓은 주제는 발행량은 늘리지만 고쳐야 할 글과 책임져야 할 주장도 함께 늘린다.</p></div></div>
+      <div class="grid3"><article class="card"><div class="icon">◌</div><h3>평균적인 정보</h3><p>정의·장단점·추천 목록은 검색 결과와 AI 요약에서 이미 소비된다. ‘무엇인가’만 답하면 클릭할 이유가 약하다.</p></article><article class="card"><div class="icon">↗</div><h3>추가 가치 없는 대량 발행</h3><p>문제는 AI 사용 자체가 아니라, 독창적 가치 없이 비슷한 페이지를 대량으로 만드는 방식이다.</p></article><article class="card"><div class="icon">!</div><h3>검수 비용의 착각</h3><p>초안이 10분이어도 사실 확인과 책임은 사람에게 남는다. 특히 금융·건강·법률은 오류 비용이 크다.</p></article></div>
+      <div class="compare" style="margin-top:24px"><div class="row head"><div>현재 방식</div><div>왜 막히는가</div><div>바꿀 기준</div></div><div class="row"><div class="bad">키워드 → AI 일반론</div><div>이미 있는 내용과 유사</div><div class="good">경험·숫자·실패를 먼저 수집</div></div><div class="row"><div class="bad">하루 여러 편 대량 발행</div><div>검수와 업데이트가 밀림</div><div class="good">적은 글이라도 의도와 증거 정합</div></div><div class="row"><div class="bad">주제를 넓게 확장</div><div>전문성과 출처 신뢰가 흐려짐</div><div class="good">2~3개 주제 묶음에 깊이 축적</div></div><div class="row"><div class="bad">글 개수로 수익 계산</div><div>페이지뷰·CTR·RPM을 놓침</div><div class="good">Search Console·애드센스 지표 사용</div></div></div>
+    </div></section>
+
+    <section id="roles"><div class="wrap"><div class="section-head"><div class="section-no">03 · 역할 분담</div><div><h2>AI는 구조를,<br>사람은 흔적을 만든다</h2><p>돈이 되는 AI 블로그는 ‘AI가 쓴 글’보다 ‘내가 겪은 일을 AI로 정리한 글’에 가깝다.</p></div></div>
+      <div class="roles"><div class="role ai"><h3>AI에게 맡길 것</h3><ul><li>메모를 목차로 구조화</li><li>초안과 문단 흐름 만들기</li><li>제목 방향 여러 개 제안</li><li>비교 항목과 질문 정리</li><li>어색한 문장 다듬기</li></ul></div><div class="arrow">→</div><div class="role human"><h3>사람이 책임질 것</h3><ul><li>직접 사용·방문·결제 경험</li><li>실패와 예외 조건 기록</li><li>가격·날짜·공식 문서 검증</li><li>검색 의도와 증거 맞추기</li><li>과장과 책임 못 질 주장 제거</li></ul></div></div>
+    </div></section>
+
+    <section id="check"><div class="wrap"><div class="section-head"><div class="section-no">04 · 발행 점검</div><div><h2>“발행 가능한가?”보다<br>“남을 이유가 있는가?”</h2><p>아래 항목을 직접 체크해 보자. 위험 신호가 3개 이상이면 발행보다 보강이 먼저다.</p></div></div>
+      <div class="check-layout"><div class="checks">
+        <label class="check"><input type="checkbox"><span><b>직접 경험이 있다</b><span>사용·방문·결제·비교·실패 중 하나 이상</span></span></label>
+        <label class="check"><input type="checkbox"><span><b>확인 가능한 숫자가 있다</b><span>시간·비용·조회수·CTR·가격·날짜 등</span></span></label>
+        <label class="check"><input type="checkbox"><span><b>검증할 위치가 있다</b><span>공식 문서·가격표·실제 화면·내 데이터</span></span></label>
+        <label class="check"><input type="checkbox"><span><b>검색 의도가 좁고 분명하다</b><span>독자가 어떤 판단을 하러 오는지 한 문장으로 설명 가능</span></span></label>
+        <label class="check"><input type="checkbox"><span><b>기존 글보다 나은 재료가 있다</b><span>실패·비교·조건·예외·판단 기준 중 하나 이상</span></span></label>
+        <label class="check"><input type="checkbox"><span><b>업데이트할 수 있다</b><span>가격·정책·기능이 바뀌면 다시 확인 가능</span></span></label>
+        <label class="check"><input type="checkbox"><span><b>틀렸을 때 수정하고 책임질 수 있다</b><span>근거를 제시하고 정정할 준비가 되어 있음</span></span></label>
+      </div><aside class="score"><small>발행 준비도</small><div class="big"><span id="count">0</span>/7</div><div class="meter"><i id="bar"></i></div><p class="verdict" id="verdict">아직은 재료 수집 단계입니다.</p></aside></div>
+    </div></section>
+
+    <section id="action"><div class="wrap"><div class="section-head"><div class="section-no">05 · 실행 순서</div><div><h2>키워드보다<br>내 흔적을 먼저 모은다</h2><p>글감을 고르는 순서를 뒤집으면 AI는 복제 도구가 아니라 경험을 선명하게 만드는 편집 도구가 된다.</p></div></div>
+      <div class="timeline"><article class="phase"><h3>기록</h3><p>돈을 쓴 순간, 시간을 잃은 지점, 선택을 후회한 이유를 메모한다.</p></article><article class="phase"><h3>검증</h3><p>비용·기간·결과를 공식 자료와 실제 데이터로 확인한다.</p></article><article class="phase"><h3>구조화</h3><p>AI에게 독자가 판단하기 좋은 순서와 빠진 질문을 찾게 한다.</p></article><article class="phase"><h3>측정·개선</h3><p>노출·클릭률·체류·RPM을 보고 제목과 내용을 업데이트한다.</p></article></div>
+      <div class="thesis" style="margin-top:24px"><div class="num">LAST QUESTION</div><div><strong>AI에게 맡길 문장이 있는가보다,<br>AI에게 정리시킬 만한 내 흔적이 있는가?</strong></div></div>
+    </div></section>
+  </main>
+  <footer><div class="wrap foot"><div class="source">이 페이지는 원문 <a href="https://jjeongil.tistory.com/3482" target="_blank" rel="noreferrer">「AI 블로그 부업이 안 되는 진짜 이유: 글 100개보다 경험과 검증이 먼저」</a>의 핵심 논지를 요약·재구성한 비공식 학습 자료입니다.</div><div class="stamp">SUMMARY PAGE<br>2026.08.11</div></div></footer>
+  <script>
+    const boxes=[...document.querySelectorAll('.check input')],count=document.getElementById('count'),bar=document.getElementById('bar'),verdict=document.getElementById('verdict');
+    function update(){const n=boxes.filter(x=>x.checked).length;count.textContent=n;bar.style.width=(n/7*100)+'%';verdict.textContent=n<=2?'발행보다 보강이 먼저입니다.':n<=4?'핵심 재료가 더 필요합니다.':n<=6?'좋습니다. 빈 근거만 보완하세요.':'경험과 검증을 갖춘 글입니다.'}
+    boxes.forEach(x=>x.addEventListener('change',update));
+  </script>
+</body>
+</html>
